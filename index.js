@@ -1,5 +1,5 @@
 var score=0;
-var time=10;
+var time=30;
 var hitvalue=0;
 var highscore=0;
 var overaudio=document.querySelector("#overaudio");
@@ -33,7 +33,9 @@ function runTime(){
             }
             else
             {
+                document.querySelector("#beat").innerHTML=""
                 overaudio.play();
+                
             }
             
             document.querySelector("#gameover h2").innerHTML=`Your score is ${score}`;
@@ -86,7 +88,7 @@ else{
 button.addEventListener("click",function(){
     document.querySelector("#bubbles").style.display="flex";
     document.querySelector("#gameover").style.display="none";
-    time=10;
+    time=30;
     score=0;
     document.querySelector("#scoreval").innerHTML="0";
     runTime();
